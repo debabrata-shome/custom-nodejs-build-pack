@@ -2,12 +2,16 @@
 
 echo "-----> Custom Node.js Buildpack"
 
-# Define the directory from which you want to deploy your app.
-APP_DIR=${CUSTOM_APP_DIR}
+BUILD_DIR=${1:-}
+ls -lrt ${BUILD_DIR}/
 
-rm -rf src package.json package-lock.json
 
-cp -r ${APP_DIR}/* .
+rm -rf ${BUILD_DIR}/src  ${BUILD_DIR}/package.json  ${BUILD_DIR}/package-lock.json
+
+
+cp -r ${BUILD_DIR}/${APP_DIR}/react-simple-chatbot/* ${BUILD_DIR}/
+
+ls -lrt ${BUILD_DIR}/
 
 npm install
 npm run build
