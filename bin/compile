@@ -40,6 +40,8 @@ source "$BP_DIR/lib/builddata.sh"
 source "$BP_DIR/lib/yarn-2.sh"
 echo "-----> Custom Node.js Buildpack"
 
+export PATH="$BUILD_DIR/.heroku/node/bin:$BUILD_DIR/.heroku/yarn/bin":$PATH
+
 ls -lrt ${BUILD_DIR}/
 
 
