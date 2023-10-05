@@ -9,7 +9,7 @@ ls -lrt ${BUILD_DIR}/
 rm -rf ${BUILD_DIR}/src  ${BUILD_DIR}/package.json  ${BUILD_DIR}/package-lock.json
 
 
-cp -r ${BUILD_DIR}/${APP_DIR}/react-simple-chatbot/* ${BUILD_DIR}/
+cp -r ${BUILD_DIR}/ui/react-simple-chatbot/* ${BUILD_DIR}/
 
 ls -lrt ${BUILD_DIR}/
 
