@@ -5,8 +5,9 @@ echo "-----> Custom Node.js Buildpack"
 # Define the directory from which you want to deploy your app.
 APP_DIR=${CUSTOM_APP_DIR}
 
-# Change to the app directory.
-cd $APP_DIR
+rm-rf src package.json package-lock.json
+
+cp -r ${APP_DIR)/* .
 
 # Install dependencies and build your app (replace these commands with your own).
 npm install
