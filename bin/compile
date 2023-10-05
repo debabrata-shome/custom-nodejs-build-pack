@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "-----> Custom Node.js Buildpack"
+
+# Define the directory from which you want to deploy your app.
+APP_DIR=${CUSTOM_APP_DIR}
+
+# Change to the app directory.
+cd $APP_DIR
+
+# Install dependencies and build your app (replace these commands with your own).
+npm install
+npm run build
+
+echo "-----> Buildpack finished"
